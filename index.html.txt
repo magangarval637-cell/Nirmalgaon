@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NirmalGaon | Education & Health Watch</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7f6; }
+    header { background: #2e7d32; color: white; padding: 15px; text-align: center; }
+    nav { background: #1b5e20; padding: 10px; text-align: center; }
+    nav button { margin: 5px; padding: 8px 12px; border: none; cursor: pointer; }
+    section { padding: 20px; background: white; margin: 15px; border-radius: 8px; }
+    h2 { color: #2e7d32; }
+    .dashboard span { display: inline-block; margin: 8px; padding: 10px; border-radius: 5px; }
+    .green { background: #c8e6c9; }
+    .red { background: #ffcdd2; }
+    .yellow { background: #fff9c4; }
+    footer { text-align: center; padding: 10px; background: #2e7d32; color: white; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>NirmalGaon</h1>
+  <p id="tagline">Shiksha, Swasthya aur Sawaal</p>
+</header>
+
+<nav>
+  <button onclick="setLang('hi')">हिंदी</button>
+  <button onclick="setLang('gu')">ગુજરાતી</button>
+  <button onclick="setLang('en')">English</button>
+</nav>
+
+<section>
+  <h2 id="heroTitle">Village Education & Health Transparency Platform</h2>
+  <p id="heroText">This website helps villagers know their rights in education and health and report problems anonymously.</p>
+</section>
+
+<section>
+  <h2 id="eduTitle">Education Watch</h2>
+  <ul id="eduList">
+    <li>Teacher attendance tracking</li>
+    <li>Mid-day meal status</li>
+    <li>Scholarship awareness</li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="healthTitle">Health Watch</h2>
+  <ul id="healthList">
+    <li>Doctor availability</li>
+    <li>Free medicine status</li>
+    <li>Vaccination information</li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="dashTitle">Transparency Dashboard</h2>
+  <div class="dashboard">
+    <span class="green" id="d1">Teacher Attendance: 82%</span>
+    <span class="red" id="d2">Doctor Availability: 60%</span>
+    <span class="yellow" id="d3">Complaints Resolved: 45%</span>
+  </div>
+</section>
+
+<section>
+  <h2 id="complaintTitle">Anonymous Complaint</h2>
+  <p id="complaintText">Report education or health issues without sharing your name.</p>
+  <button>Submit Complaint</button>
+</section>
+
+<footer>
+  <p>© 2026 NirmalGaon | Awareness • Accountability • Action</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    if (lang === 'hi') {
+      document.getElementById('heroTitle').innerText = 'Gaon ki Shiksha aur Swasthya ki Sachchai';
+      document.getElementById('heroText').innerText = 'Yeh website gaon ke logon ko unke adhikaar aur sevaon ki jankari deti hai.';
+      document.getElementById('eduTitle').innerText = 'Shiksha Jagrukta';
+      document.getElementById('healthTitle').innerText = 'Swasthya Jagrukta';
+      document.getElementById('dashTitle').innerText = 'Transparency Dashboard';
+      document.getElementById('complaintTitle').innerText = 'Gupt Shikayat';
+      document.getElementById('complaintText').innerText = 'Bina naam bataye samasya report karein.';
+    }
+    if (lang === 'gu') {
+      document.getElementById('heroTitle').innerText = 'ગામની શિક્ષણ અને આરોગ્યની હકીકત';
+      document.getElementById('heroText').innerText = 'આ વેબસાઇટ ગામલોકોને તેમના અધિકારો વિશે જાણકારી આપે છે.';
+      document.getElementById('eduTitle').innerText = 'શિક્ષણ દેખરેખ';
+      document.getElementById('healthTitle').innerText = 'આરોગ્ય દેખરેખ';
+      document.getElementById('dashTitle').innerText = 'પારદર્શિતા ડેશબોર્ડ';
+      document.getElementById('complaintTitle').innerText = 'અજ્ઞાત ફરિયાદ';
+      document.getElementById('complaintText').innerText = 'નામ આપ્યા વગર ફરિયાદ કરો.';
+    }
+    if (lang === 'en') {
+      location.reload();
+    }
+  }
+</script>
+
+</body>
+</html>
